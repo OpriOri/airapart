@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Новое бронирование</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; padding: 20px;">
+    <h2 style="color: #2c3e50;">Новое бронирование на сайте</h2>
+
+    <h3 style="margin-top: 30px;">Детали бронирования:</h3>
+    <ul style="list-style: none; padding: 0;">
+        <li><strong>ID бронирования:</strong> {{ id }}</li>
+        <li><strong>Квартира:</strong> {{ apartment_title }} (ID: {{ apartment_id }})</li>
+        <li><strong>Даты:</strong> с {{ check_in_date }} по {{ check_out_date }}</li>
+        <li><strong>Гостей:</strong> {{ guests }}</li>
+        <li><strong>Сумма:</strong> {{ amount }} ₽</li>
+        <li><strong>Питомец:</strong> {{ "Да, " + pet_type if has_pet and pet_type else "Нет" }}</li>
+    </ul>
+
+    {% if description %}
+    <p><strong>Комментарий клиента:</strong><br>{{ description }}</p>
+    {% endif %}
+
+    <h3 style="margin-top: 30px;">Контакты клиента:</h3>
+    <ul style="list-style: none; padding: 0;">
+        <li><strong>Имя:</strong> {{ customer_name }}</li>
+        <li><strong>Email:</strong> {{ customer_email }}</li>
+        <li><strong>Телефон:</strong> {{ customer_phone }}</li>
+    </ul>
+
+    <p style="margin-top: 30px; font-size: 14px; color: #777;">
+        Статус бронирования: <strong>{{ status }}</strong><br>
+        Активно: <strong>{{ "Да" if is_active else "Нет" }}</strong><br>
+    </p>
+
+    <p style="font-size: 13px; color: #999;">Токен отмены: {{ cancel_token }}</p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Бронирование подтверждено</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; color: #333;">
+    <h2 style="color: #2e6da4;">Ваше бронирование подтверждено</h2>
+    <p>Здравствуйте, {{ customer_name }}!</p>
+    <p>Спасибо за бронирование квартиры <strong>{{ apartment_title }}</strong>.</p>
+
+    <h3>Детали бронирования:</h3>
+    <ul>
+        <li><strong>ID квартиры:</strong> {{ apartment_id }}</li>
+        <li><strong>Даты:</strong> {{ check_in_date }} – {{ check_out_date }}</li>
+        <li><strong>Гостей:</strong> {{ guests }}</li>
+        <li><strong>Сумма:</strong> {{ amount }} ₽</li>
+        <li><strong>Питомец:</strong> {% if has_pet %}Да, {{ pet_type }}{% else %}Нет{% endif %}</li>
+        {% if description %}
+        <li><strong>Комментарий:</strong> {{ description }}</li>
+        {% endif %}
+    </ul>
+
+    <p><strong>ВАЖНО!</strong> Для завершения бронирования необходимо:</p>
+    <ol>
+        <li>Отправить фото паспорта (разворот с основной информацией) владельцу через WhatsApp по этому номеру ----> +7 (928) 351-91-92</li>
+        <li>Обязательно сверяйте номер владельца c номером на сайте в разделе контакты</li>
+        <li>После подтверждения оплаты, вам будут высланы все дальнейшие инструкции по заселению</li>
+    </ol>
+
+    <h3 style="margin-top: 30px; color: #d9534f;">Информация для отмены бронирования</h3>
+<div style="padding: 15px; background-color: #f2dede; border-left: 6px solid #d9534f; margin-top: 10px;">
+    <p style="margin: 5px 0;"><strong>ID бронирования:</strong> {{ id }}</p>
+    <p style="margin: 5px 0;"><strong>Код отмены:</strong> {{ cancel_token }}</p>
+</div>
+
+<p style="margin-top: 10px;">
+    Чтобы отменить бронирование, перейдите по ссылке и введите эти данные:
+    <br>
+    <a href="https://airapartmv.ru/bookings/cancel" style="color: #337ab7;">https://airapartmv.ru/bookings/cancel</a>
+</p>
+
+</body>
+</html>

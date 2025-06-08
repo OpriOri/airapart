@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/backend/db_init/init.sql" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/generate_sql.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/inserts.sql" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frontend/src/components/PublicOfferDialog.tsx" charset="UTF-8" />
+  </component>
+</project>
