@@ -2,7 +2,7 @@ services:
   backend:
     build:
       context: .
-      dockerfile: Dockerfile  # Теперь используется один Dockerfile для всего
+      dockerfile: Dockerfile
     ports:
       - "8000:8000"
     env_file: .env
@@ -29,6 +29,18 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+    networks:
+      - rental-network
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
     networks:
       - rental-network
     restart: unless-stopped
