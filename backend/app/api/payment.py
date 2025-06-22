@@ -5,6 +5,7 @@ from yookassa import Payment
 import uuid
 import logging
 import ipaddress
+from decimal import Decimal
 
 from backend.app.config import YOOKASSA_SHOP_CONFIG
 from backend.app.db.session import get_db
@@ -26,15 +27,13 @@ yookassa.Configuration.secret_key = YOOKASSA_SHOP_CONFIG["secret_key"]
 YOOKASSA_IP_RANGES = [
     ipaddress.ip_network("185.71.76.0/27"),
     ipaddress.ip_network("185.71.77.0/27"),
-    ipaddress.ip_network("77.75.153.0/25")
+    ipaddress.ip_network("77.75.153.0/25"),
+    ipaddress.ip_network("172.18.0.1/32")
 ]
 
 
 @router.post("/create")
 def create_payment(booking: BookingCreate, request: Request, db: Session = Depends(get_db)):
-    """
-    Создает платёж в ЮKassa после валидации брони.
-    """
     # Шаг 1: Валидация и расчет стоимости
     try:
         validated = validate_booking_data(booking, db)
@@ -59,7 +58,7 @@ def create_payment(booking: BookingCreate, request: Request, db: Session = Depen
             },
             "confirmation": {
                 "type": "redirect",
-                "return_url": "http://localhost:3000/payment/success"
+                "return_url": "https://airapartmv.ru/payment/success"
             },
             "capture": True,
             "description": f"Бронирование квартиры «{apartment_title}»",
@@ -119,11 +118,13 @@ def yookassa_webhook(
         raise HTTPException(status_code=404, detail="Booking not found")
 
     # проверка суммы на подмену
-    expected_amount = booking.amount
+    expected_amount = Decimal(booking.amount)
 
-    if str(payload.object.amount.value) != str(expected_amount):
+    actual_amount = Decimal(payload.object.amount.value)
+
+    if actual_amount != expected_amount:
         logging.warning(
-            f"❌ Несовпадение суммы оплаты! Соси. Ожидалось: {expected_amount}, получено: {payload.object.amount.value}"
+            f"❌ Несовпадение суммы оплаты! Соси. Ожидалось: {expected_amount}, получено: {actual_amount}"
         )
         raise HTTPException(status_code=400, detail="Payment amount mismatch")
 

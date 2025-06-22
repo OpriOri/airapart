@@ -32,7 +32,6 @@ ENV PYTHONPATH=/install/lib/python3.10/site-packages \
 # Копируем зависимости
 COPY --from=python-builder --chown=appuser:appuser /install /install
 
-# Копируем .env в нужное место (в /rentalweb/.env)
 COPY .env .env
 
 

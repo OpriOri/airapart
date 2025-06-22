@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     DB_USER: str
     DB_PASSWORD: str
     DB_NAME: str
-    DB_HOST: str = "localhost"  # для локала localhost; в проде будет "db"
+    DB_HOST: str
     DB_PORT: int = 5432
 
     @property

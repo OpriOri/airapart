@@ -1,6 +1,7 @@
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from uuid import uuid4
 
+from sqlalchemy import or_, and_
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 from fastapi import Depends, HTTPException
@@ -26,12 +27,22 @@ def validate_booking_data(booking: BookingCreate, db: Session = Depends(get_db))
     if booking.check_in_date.date() < date.today():
         raise HTTPException(400, detail="Дата заезда не может быть в прошлом")
 
-    # Доступность
+
+    now = datetime.utcnow()
+    expiration_minutes = 15
+
     overlapping = db.query(Booking).filter(
         Booking.apartment_id == booking.apartment_id,
         Booking.check_out_date > booking.check_in_date,
         Booking.check_in_date < booking.check_out_date,
-        Booking.is_active.is_(True)
+        Booking.is_active.is_(True),
+        or_(
+            Booking.status == "confirmed",
+            and_(
+                Booking.status == "pending",
+                Booking.created_at > now - timedelta(minutes=expiration_minutes)
+            )
+        )
     ).first()
     if overlapping:
         raise HTTPException(409, detail="Квартира уже занята на выбранные даты")

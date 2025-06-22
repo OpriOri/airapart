@@ -10,7 +10,8 @@ services:
       DATABASE_URL: "postgresql://${DB_USER}:${DB_PASSWORD}@db:5432/${DB_NAME}?sslmode=disable"
       PYTHONUNBUFFERED: "1"
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     networks:
       - rental-network
     restart: unless-stopped
@@ -23,7 +24,8 @@ services:
       POSTGRES_DB: ${DB_NAME}
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./backend/db_init:/docker-entrypoint-initdb.d
+      - ./backend/db_init:/docker-enrtypoint-initdb.d
+
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
       interval: 5s
@@ -47,6 +49,7 @@ services:
 
 volumes:
   postgres_data:
+  
 
 networks:
   rental-network:

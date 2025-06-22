@@ -26,4 +26,4 @@ class ApartmentSchema(BaseModel):
     is_new: bool
 
     class Config:
-        orm_mode = True
+        from_attributes = True

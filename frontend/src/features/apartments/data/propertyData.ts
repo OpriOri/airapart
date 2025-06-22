@@ -40,17 +40,17 @@ export const allProperties: Property[] = [
         area: 40,
         rating: 4.9,
         maxGuests: 4,
-        imageUrl: 'src/pictures/1_main.jpg',
+        imageUrl: '/pictures/1_main.jpg',
         images: [
-            'src/pictures/1_2.jpg',
-            'src/pictures/1_3.jpg',
-            'src/pictures/1_4.jpg',
-            'src/pictures/1_5.jpg',
-            'src/pictures/1_6.jpg',
-            'src/pictures/1_7.jpg',
-            'src/pictures/1_8.jpg',
-            'src/pictures/1_9.jpg',
-            'src/pictures/1_10.jpg'
+            'pictures/1_2.jpg',
+            'pictures/1_3.jpg',
+            'pictures/1_4.jpg',
+            'pictures/1_5.jpg',
+            'pictures/1_6.jpg',
+            'pictures/1_7.jpg',
+            'pictures/1_8.jpg',
+            'pictures/1_9.jpg',
+            'pictures/1_10.jpg'
         ],
         description: 'Новая однокомнатная квартира в элитном жилом комплексе Змейка, рядом аэропорт, жд вокзал, кафе, магазины и столовая. В квартире есть все для комфортного проживания.',
         amenities: [
@@ -80,17 +80,17 @@ export const allProperties: Property[] = [
         area: 40,
         rating: 5,
         maxGuests: 6,
-        imageUrl: 'src/pictures/2_main.jpg',
+        imageUrl: '/pictures/2_main.jpg',
         images: [
-            'src/pictures/2_1.jpg',
-            'src/pictures/2_2.jpg',
-            'src/pictures/2_3.jpg',
-            'src/pictures/2_4.jpg',
-            'src/pictures/2_5.jpg',
-            'src/pictures/2_6.jpg',
-            'src/pictures/2_6.jpg',
-            'src/pictures/2_7.jpg',
-            'src/pictures/2_8.jpg'
+            'pictures/2_1.jpg',
+            'pictures/2_2.jpg',
+            'pictures/2_3.jpg',
+            'pictures/2_4.jpg',
+            'pictures/2_5.jpg',
+            'pictures/2_6.jpg',
+            'pictures/2_6.jpg',
+            'pictures/2_7.jpg',
+            'pictures/2_8.jpg'
 
         ],
         description: 'Современные апартаменты в элитном комплексе "Змейка"\n' +
@@ -124,24 +124,24 @@ export const allProperties: Property[] = [
         area: 40,
         rating: 5,
         maxGuests: 4,
-        imageUrl: 'src/pictures/3_main.jpg',
+        imageUrl: '/pictures/3_main.jpg',
         images: [
-            'src/pictures/3_1.jpg',
-            'src/pictures/3_2.jpg',
-            'src/pictures/3_3.jpg',
-            'src/pictures/3_main.jpg',
-            'src/pictures/3_5.jpg',
-            'src/pictures/3_6.jpg',
-            'src/pictures/3_7.jpg',
-            'src/pictures/3_8.jpg',
-            'src/pictures/3_9.jpg',
-            'src/pictures/3_10.jpg',
-            'src/pictures/3_11.jpg',
-            'src/pictures/3_12.jpg',
-            'src/pictures/3_13.jpg',
-            'src/pictures/3_14.jpg',
-            'src/pictures/3_15.jpg',
-            'src/pictures/3_16.jpg'
+            'pictures/3_1.jpg',
+            'pictures/3_2.jpg',
+            'pictures/3_3.jpg',
+            'pictures/3_main.jpg',
+            'pictures/3_5.jpg',
+            'pictures/3_6.jpg',
+            'pictures/3_7.jpg',
+            'pictures/3_8.jpg',
+            'pictures/3_9.jpg',
+            'pictures/3_10.jpg',
+            'pictures/3_11.jpg',
+            'pictures/3_12.jpg',
+            'pictures/3_13.jpg',
+            'pictures/3_14.jpg',
+            'pictures/3_15.jpg',
+            'pictures/3_16.jpg'
         ],
         description: 'Апартаменты с видом на гору в 5 минутах от аэропорта\n' +
             'Современные апартаменты с панорамным видом на горы и всем необходимым для комфортного проживания:\n' +
@@ -186,16 +186,16 @@ export const allProperties: Property[] = [
         area: 40,
         rating: 4.8,
         maxGuests: 4,
-        imageUrl: 'src/pictures/4_main.jpg',
+        imageUrl: '/pictures/4_main.jpg',
         images: [
-            'src/pictures/4_1.jpg',
-            'src/pictures/4_2.jpg',
-            'src/pictures/4_3.jpg',
-            'src/pictures/4_4.jpg',
-            'src/pictures/4_5.jpg',
-            'src/pictures/4_6.jpg',
-            'src/pictures/4_7.jpg',
-            'src/pictures/4_8.jpg'
+            'pictures/4_1.jpg',
+            'pictures/4_2.jpg',
+            'pictures/4_3.jpg',
+            'pictures/4_4.jpg',
+            'pictures/4_5.jpg',
+            'pictures/4_6.jpg',
+            'pictures/4_7.jpg',
+            'pictures/4_8.jpg'
         ],
         description: 'Новая однокомнатная квартира в элитном комплексе у аэропорта\n' +
             'Современная квартира с полной комплектацией для комфортного проживания. В шаговой доступности магазины, кафе и вся необходимая инфраструктура.\n' +
@@ -236,16 +236,16 @@ export const allProperties: Property[] = [
         area: 40,
         rating: 4.9,
         maxGuests: 4,
-        imageUrl: 'src/pictures/5_main.jpg',
+        imageUrl: '/pictures/5_main.jpg',
         images: [
-            'src/pictures/5_1.jpg',
-            'src/pictures/5_2.jpg',
-            'src/pictures/5_3.jpg',
-            'src/pictures/5_4.jpg',
-            'src/pictures/5_5.jpg',
-            'src/pictures/5_6.jpg',
-            'src/pictures/5_7.jpg',
-            'src/pictures/5_8.jpg'
+            'pictures/5_1.jpg',
+            'pictures/5_2.jpg',
+            'pictures/5_3.jpg',
+            'pictures/5_4.jpg',
+            'pictures/5_5.jpg',
+            'pictures/5_6.jpg',
+            'pictures/5_7.jpg',
+            'pictures/5_8.jpg'
         ],
         description: 'Апартаменты с видом на гору в 5 минутах от аэропорта\n' +
             'Современные апартаменты с панорамным видом на горы и всем необходимым для комфортного проживания:\n' +
@@ -290,17 +290,17 @@ export const allProperties: Property[] = [
         area: 57,
         rating: 4.9,
         maxGuests: 3,
-        imageUrl: "src/pictures/6_main.jpg",
+        imageUrl: "/pictures/6_main.jpg",
         images: [
-            "src/pictures/6_1.jpg",
-            "src/pictures/6_2.jpg",
-            "src/pictures/6_3.jpg",
-            "src/pictures/6_4.jpg",
-            "src/pictures/6_5.jpg",
-            "src/pictures/6_6.jpg",
-            "src/pictures/6_7.jpg",
-            "src/pictures/6_8.jpg",
-            "src/pictures/6_9.jpg"
+            "pictures/6_1.jpg",
+            "pictures/6_2.jpg",
+            "pictures/6_3.jpg",
+            "pictures/6_4.jpg",
+            "pictures/6_5.jpg",
+            "pictures/6_6.jpg",
+            "pictures/6_7.jpg",
+            "pictures/6_8.jpg",
+            "pictures/6_9.jpg"
         ],
         description: "Просторная 2-комнатная квартира премиум-класса в Минеральных Водах\n" +
             "Современный интерьер и все необходимое для комфортного проживания:\n" +
@@ -350,17 +350,17 @@ export const allProperties: Property[] = [
         area: 65,
         rating: 5,
         maxGuests: 6,
-        imageUrl: "src/pictures/7_main.jpg",
+        imageUrl: "/pictures/7_main.jpg",
         images: [
-            'src/pictures/7_1.jpg',
-            'src/pictures/7_2.jpg',
-            'src/pictures/7_3.jpg',
-            'src/pictures/7_4.jpg',
-            'src/pictures/7_5.jpg',
-            'src/pictures/7_6.jpg',
-            'src/pictures/7_7.jpg',
-            'src/pictures/7_8.jpg',
-            'src/pictures/7_9.jpg'
+            'pictures/7_1.jpg',
+            'pictures/7_2.jpg',
+            'pictures/7_3.jpg',
+            'pictures/7_4.jpg',
+            'pictures/7_5.jpg',
+            'pictures/7_6.jpg',
+            'pictures/7_7.jpg',
+            'pictures/7_8.jpg',
+            'pictures/7_9.jpg'
         ],
         description: "2-комнатная квартира бизнес-класса в престижном районе Минеральных Вод\n" +
             "Просторное жилье с продуманной планировкой и высококлассной отделкой. Идеально подходит для деловых поездок и семейного отдыха.\n" +
@@ -412,18 +412,18 @@ export const allProperties: Property[] = [
         area: 65,
         rating: 4.8,
         maxGuests: 5,
-        imageUrl: "src/pictures/8_main.jpg",
+        imageUrl: "/pictures/8_main.jpg",
         images: [
-            'src/pictures/8_1.jpg',
-            'src/pictures/8_2.jpg',
-            'src/pictures/8_3.jpg',
-            'src/pictures/8_4.jpg',
-            'src/pictures/8_5.jpg',
-            'src/pictures/8_6.jpg',
-            'src/pictures/8_7.jpg',
-            'src/pictures/8_8.jpg',
-            'src/pictures/8_9.jpg',
-            'src/pictures/8_10.jpg'
+            'pictures/8_1.jpg',
+            'pictures/8_2.jpg',
+            'pictures/8_3.jpg',
+            'pictures/8_4.jpg',
+            'pictures/8_5.jpg',
+            'pictures/8_6.jpg',
+            'pictures/8_7.jpg',
+            'pictures/8_8.jpg',
+            'pictures/8_9.jpg',
+            'pictures/8_10.jpg'
         ],
         description: "Сдается 2-комнатная квартира вблизи аэропорта Минеральные Воды\n" +
             "Ключевые преимущества:\n" +
@@ -471,26 +471,26 @@ export const allProperties: Property[] = [
         area: 40,
         rating: 4.8,
         maxGuests: 3,
-        imageUrl: 'src/pictures/9_main.jpg',
+        imageUrl: '/pictures/9_main.jpg',
         images: [
-            'src/pictures/9_1.jpg',
-            'src/pictures/9_2.jpg',
-            'src/pictures/9_3.jpg',
-            'src/pictures/9_4.jpg',
-            'src/pictures/9_5.jpg',
-            'src/pictures/9_6.jpg',
-            'src/pictures/9_7.jpg',
-            'src/pictures/9_8.jpg',
-            'src/pictures/9_9.jpg',
-            'src/pictures/9_10.jpg',
-            'src/pictures/9_11.jpg',
-            'src/pictures/9_12.jpg',
-            'src/pictures/9_13.jpg',
-            'src/pictures/9_14.jpg',
-            'src/pictures/9_15.jpg',
-            'src/pictures/9_16.jpg',
-            'src/pictures/9_17.jpg',
-            'src/pictures/9_18.jpg'
+            'pictures/9_1.jpg',
+            'pictures/9_2.jpg',
+            'pictures/9_3.jpg',
+            'pictures/9_4.jpg',
+            'pictures/9_5.jpg',
+            'pictures/9_6.jpg',
+            'pictures/9_7.jpg',
+            'pictures/9_8.jpg',
+            'pictures/9_9.jpg',
+            'pictures/9_10.jpg',
+            'pictures/9_11.jpg',
+            'pictures/9_12.jpg',
+            'pictures/9_13.jpg',
+            'pictures/9_14.jpg',
+            'pictures/9_15.jpg',
+            'pictures/9_16.jpg',
+            'pictures/9_17.jpg',
+            'pictures/9_18.jpg'
 
         ],
         description: "Новые апартаменты с видом на горы в 5 минутах от аэропорта Минеральные Воды\n" +
@@ -530,4 +530,3 @@ export const allProperties: Property[] = [
         isNew: false
     }
 ];
-
