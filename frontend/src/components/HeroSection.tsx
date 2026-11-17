@@ -11,15 +11,15 @@ interface SlideImage {
 
 const slides: SlideImage[] = [
     {
-        url: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+        url: '/pictures/1_main.jpg',
         caption: 'Современные апартаменты в 10 минутах от аэропорта'
     },
     {
-        url: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+        url: '/pictures/4_main.jpg',
         caption: 'Только премиальные и комфортные ЖК'
     },
     {
-        url: 'https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+        url: '/pictures/7_main.jpg',
         caption: 'Новые квартиры и апартаменты уже ждут'
     }
 ];

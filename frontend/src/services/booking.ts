@@ -6,7 +6,7 @@
 // URL API бэкенда
 const isDev = import.meta.env.DEV;
 
-let RAW_API_URL = isDev ? "http://localhost:8000" : import.meta.env.VITE_API_URL;
+const RAW_API_URL = isDev ? "/api" : import.meta.env.VITE_API_URL;
 
 
 // Нормализуем

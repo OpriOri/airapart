@@ -23,7 +23,9 @@ export default function PropertyImageCarousel({ images, title }: PropertyImageCa
     const fullscreenCarouselRef = useRef<any>(null);
 
     // Fallback image if no images provided
-    const imageList = images && images.length > 0 ? images : ['/placeholder.svg'];
+    const imageList = (images?.length ? images : ['/placeholder.svg']).map(image =>
+        image.startsWith('/') || /^https?:\/\//i.test(image) ? image : `/${image}`
+    );
 
     // Функция для обработки клика на миниатюру
     const handleThumbnailClick = (index: number) => {
@@ -78,7 +80,7 @@ export default function PropertyImageCarousel({ images, title }: PropertyImageCa
                                 >
                                     <AspectRatio ratio={4 / 3} className="bg-muted">
                                         <img
-                                            src={image.startsWith('https') ? image : `/${image}`}
+                                            src={image}
                                             alt={`${title} - изображение ${index + 1}`}
                                             className="w-full h-full object-cover"
                                             loading="lazy"
@@ -107,7 +109,7 @@ export default function PropertyImageCarousel({ images, title }: PropertyImageCa
                             )}
                         >
                             <img
-                                src={image.startsWith('https') ? image : `/${image}`}
+                                src={image}
                                 alt={`${title} миниатюра ${index + 1}`}
                                 className="w-full h-full object-cover"
                                 loading="lazy"
@@ -142,7 +144,7 @@ export default function PropertyImageCarousel({ images, title }: PropertyImageCa
                                 <CarouselItem key={index}>
                                     <div className="h-[70vh] flex items-center justify-center p-2 sm:p-4">
                                         <img
-                                            src={image.startsWith('https') ? image : `/${image}`}
+                                            src={image}
                                             alt={`${title} - изображение ${index + 1}`}
                                             className="max-w-full max-h-full object-contain"
                                             loading="lazy"
@@ -167,7 +169,7 @@ export default function PropertyImageCarousel({ images, title }: PropertyImageCa
                                 )}
                             >
                                 <img
-                                    src={image.startsWith('https') ? image : `/${image}`}
+                                    src={image}
                                     alt={`${title} миниатюра ${index + 1}`}
                                     className="w-full h-full object-cover"
                                     loading="lazy"
